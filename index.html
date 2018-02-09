@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friday Study Hall</title>
+    <style>
+        * {
+            margin: 0.5em;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+        #robotButton {
+            padding: 0.25em;
+            font-size: 0.75em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Friday Study Hall</h1>
+    <p>Today is Friday, a day where we study in a hall.</p>
+    <button id="robotButton">spawn new robot into existence</button>
+    <div id="robotsDiv"></div>
+    <script>
+        document.getElementById("robotButton").onclick = function () {
+            let newP = document.createElement("p");
+            let newText = document.createTextNode("Hello, World!");
+            let destination = document.getElementById("robotsDiv")
+            newP.appendChild(newText);
+            destination.appendChild(newP);
+        }
+    </script>
+</body>
+</html>
